@@ -1,0 +1,40 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+    <div class="container">
+      {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+      <div class="row">
+        <div class="col-md">
+          <img class="mb-4" src="/assets/img/logo.png" alt="Pronto Brake and Muffler Logo" height="100">
+          <p><strong>Call today:</strong> <a class="tel" href="tel:+1-805-483-2301">(805) 483-2301</a></p>  
+          <address>911. South Oxnard Blvd<br />
+          Oxnard, CA 93030</address>
+          <strong>Hours</strong>
+          <p>
+            <strong>M-F:</strong> 8:00 - 5:30<br />
+            <strong>Sat:</strong> 8:00 - 3:30<br />
+            Closed Sundays.
+          </p>
+        </div>
+        <div class="col-md-4 embed-responsive embed-responsive-16by9" id="mapbox">
+          {% include maps.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 footer-nav">
+          {%- for path in page_paths -%} 
+          {%- assign page = site.pages | where: "path", path | first -%}
+            {%- if page.title -%}
+            <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+            {% endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="col-md">
+          <p>© 2019 Pronto Brake and Muffler | <a>Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+</footer>

@@ -1,0 +1,45 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Pronto Brake and Muffler | Auto Repair Shop & Mechanic in Oxnard, CA
+email: 
+logo: /assets/img/logo.png
+description: > # this means to ignore newlines until "baseurl:"
+  Pronto Brake and Muffler provides the highest quality auto repair service at affordable prices. 
+  We do brakes, mufflers, custom exhaust, alignments, tires, oil changes, and more. Come in today!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.prontobrakeandmuffler.com" # the base hostname & protocol for your site, e.g. http://example.com
+facebook_username: prontobrakeandmuffler
+google_site_verification: 
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+header_pages:
+  - repairs.md
+  - exhaust.md
+  - performance.md
+  - tires.md
+  - blog.md
+  - about.md
+  - contact.md
+  - directions.md

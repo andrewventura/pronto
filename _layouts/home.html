@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+        <div class="jumbotron" id="jumbotron">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-9" id="jumbo-text">
+                <h2>Fast and Friendly auto repair you can depend on.</h2>
+                <a class="btn btn-primary btn-lg" href="tel:+1-805-483-2301" role="button">Call today!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <h4 class="text-center">Services</h4>
+                <p>Brakes squeaking? Tires going bald? Due for an oil change? Don't panic - we can help with all this and more.</p>
+                <a class="btn btn-primary btn-medium d-block mx-auto" href="/services">View Our Services</a>
+              </div>
+              <div class="col-sm">
+                <h4 class="text-center">Reliable Service</h4>
+                <p>We have served Oxnard and Ventura County with pride for over 30 years. Our work is backed by a satisfaction guarantee.</p>
+                <a class="btn btn-primary btn-medium d-block mx-auto" href="/about">See our story</a>
+              </div>
+              <div class="col-sm">
+                <h4 class="text-center">Call Now</h4>
+                <p>Call today to schedule an appointment or get directions.</p>
+                <a class="btn btn-primary btn-medium d-block mx-auto" href="/contact">View Our Services</a>
+              </div>
+            </div>
+          </div>
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

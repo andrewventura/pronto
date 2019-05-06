@@ -1,0 +1,61 @@
+<header class="site-header container" role="banner">
+
+  <div class="">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <a href="/" class="d-inline-block"><img src="/assets/img/logo.png" alt="Pronto Brake and Muffler Logo" height="100"></a>
+    <div class="float-md-right text-md-right text-sm-center">
+      <h3 class="text-sm-left text-md-right"><a class="tel d-block mx-auto" href="tel:+1-805-483-2301">(805) 483-2301</a></h3>
+      <address>
+        <span>911 S. Oxnard Blvd</span><br />
+        <span>Oxnard, CA 93001</span>
+      </address>
+    </div>
+  </div>
+    {%- if page_paths -%}
+      <!--<div class="wrapper">-->
+        <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav d-flex flex-row">
+              {%- for path in page_paths -%}
+                    {%- assign my_page =  site.pages | where: "path", path | first -%}
+                    {%- if my_page.title -%}
+                      <a class="nav-link px-3 {% if my_page.title == page.title %}active{%- endif -%}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                        {%- if forloop.last -%}
+                        
+                        {%- else -%}
+                        <span class="py-2"> | </span>
+                        {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+            </div>
+          </div>
+        </nav>
+      <!--</div>-->
+    {%- endif -%}
+  </div>
+</header>
+
+<!--<header class="site-header" id="topanchor">
+    <nav class="navbar navbar-static-top" role="navigation">
+          <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </button>
+                <a class="navbar-brand" href="/web/20160307000430/http://prontobrakeandmuffler.com/"><img src="/web/20160307000430im_/http://prontobrakeandmuffler.com/assets/img/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/web/20160307000430/http://prontobrakeandmuffler.com/repairs">REPAIRS AND RTEST</a></li>
+                    <li><a href="/web/20160307000430/http://prontobrakeandmuffler.com/performance">PERFORMANCE</a></li>
+                    <li><a href="/web/20160307000430/http://prontobrakeandmuffler.com/tires">TIRES</a></li>
+                    <li><a href="/web/20160307000430/http://prontobrakeandmuffler.com/about">ABOUT US</a></li>
+                    <li><a href="/web/20160307000430/http://prontobrakeandmuffler.com/contact">CONTACT US</a></li>
+                </ul>
+            </div>
+    </nav>
+    </header>-->
